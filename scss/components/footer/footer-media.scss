@@ -1,0 +1,52 @@
+@import "../../common/mixins.scss";
+
+@include tablet {
+    .study-content {
+        width: 80%!important;
+        margin: 30px auto;
+    }
+}
+
+@include mobile {
+    footer {
+        padding: 60px 35px;
+    
+        .study-content {
+            width: 100%;
+            margin: 0 auto;
+    
+            .study-title {
+                text-align: center;
+                @include fontInter;
+                font-size: 40px;
+                font-weight: 900;
+            }
+    
+            .icons-list {
+    
+                .icon-item {
+                    width: 50%;
+                    margin: 30px 0;
+                    
+                    &.mobile {
+                        display: block;
+                    }
+    
+                    .icon-item-img {
+                        width: 80px;
+                        height: 80px;
+                    }
+    
+                    .icon-item-text {
+                        @include darkFont;
+                        text-align: center;
+                        padding: 0 30px;
+                    }
+    
+                    
+                }
+            }
+    
+        }
+    }
+}

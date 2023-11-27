@@ -1,0 +1,187 @@
+@import "../../common/mixins.scss";
+@import "../../common/variables.scss";
+
+main {
+    background-image: url("../../../images/main-background.png");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+
+    .course {
+        padding: 100px 0;
+
+        .container {
+            width: 65%;
+            margin: 0 auto;
+
+            .block-btn {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+
+                .btn {
+                    @include darkFont;
+                    @include smallBtn;
+                    margin-right: 15px;
+                }
+
+                .online {
+                    background-color: $colorGreen;
+                }
+
+                .hit {
+                    background-color: $colorYellow;
+                }
+            }
+
+            .block-advertising {
+                position: relative;
+                padding-top: 65px;
+
+                .advertising-img {
+                    position: absolute;
+                    width: 395px;
+                    height: 80px;
+                    z-index: 0;
+                    left: 0;
+                    top: 35px;
+                }
+
+                .advertising-title {
+                    position: relative;
+                    z-index: 1;
+                    @include h1;
+                }
+
+                .advertising-list {
+                    margin-top: 30px;
+
+                    .advertising-item {
+                        @include size18;
+                        position: relative;
+                        margin: 15px 0;
+                        list-style-type: none;
+
+                        &:after {
+                            content: "";
+                            top: 50%;
+                            transform: translateY(-50%);
+                            left: -20px;
+                            position: absolute;
+                            background-image: url("../images/icons/Vector\ 9.svg");
+                            background-size: cover;
+                            width: 12px;
+                            height: 12px;
+
+                        }
+                    }
+                }
+            }
+
+            .price-content {
+                margin-top: 100px;
+                display: flex;
+                align-items: end;
+                margin-bottom: 20px;
+
+                .price-block {
+
+
+                    &.info {
+                        margin-bottom: 25px;
+                    }
+
+                    .price-info {
+                        @include whiteFont;
+
+                        .price-count {
+                            @include h1;
+                            position: relative;
+
+                            &:after {
+                                content: "20000 грн";
+                                position: absolute;
+                                top: -30px;
+                                text-decoration: line-through;
+                                left: 50%;
+                                text-align: center;
+                                width: 100%;
+                                transform: translateX(-50%);
+                                @include whiteFont;
+                                color: $colorSilver;
+                            }
+
+                            &::before {
+                                content: "грн";
+                                position: absolute;
+                                right: -30px;
+                                top: 0;
+                                @include size18;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+
+                    .block-btn {
+                        display: inline-flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
+                        margin-top: 30px;
+
+                        .price-btn {
+                            @include bigBtn;
+                            background: $colorLightYellow;
+                            color: $colorDark;
+                            width: 100%;
+                        }
+
+                        .price-link {
+                            @include size18;
+                            margin-top: 8px;
+                            font-size: 14px;
+                        }
+                    }
+
+                    .info-list {
+                        display: flex;
+                        justify-content: start;
+                        align-items: center;
+                        flex-wrap: wrap;
+
+                        .info-item {
+                            position: relative;
+                            margin-left: 50px;
+                            list-style-type: none;
+                            margin-top: 15px;
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 0;
+                                left: -15px;
+                                width: 2px;
+                                height: 43px;
+                                background-color: $colorLightYellow;
+                            }
+
+                            .info-text:first-child {
+                                @include size18;
+                                font-size: 16px;
+                                font-weight: 300;
+                            }
+
+                            .info-text:last-child {
+                                @include size18;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+
+}

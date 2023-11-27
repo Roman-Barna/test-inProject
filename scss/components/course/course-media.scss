@@ -1,0 +1,147 @@
+@import "../../common/mixins.scss";
+
+@include laptop {
+    
+    .container {
+        width: 90%!important;
+    }
+    
+}
+
+@include tablet {
+    .price-info {
+        display: inline-flex;
+        align-items: flex-end;
+        
+    }
+}
+
+@include mobile {
+    
+    main {
+        background-image: url("../../../images/main-background-mobile.png");
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        overflow: hidden;
+    
+        .course {
+            padding: 100px 20px 80px 20px;
+    
+            .container {
+                width: 100%!important;
+    
+                .block-advertising {
+                    padding-top: 85px;
+    
+                    .advertising-img {
+                        width: 405px;
+                        left: -20px;
+                    }
+    
+                    .advertising-title {
+                        font-size: 36px;
+                    }
+    
+                    .advertising-list {
+                        margin-top: 25px;
+                        width: 60%;
+    
+                        .advertising-item {
+                            @include size18;
+                            position: relative;
+                            margin: 15px ;
+                        }
+                    }
+                }
+    
+                .price-content {
+                    margin: 50px 0 0 0;
+                    flex-direction: column-reverse;
+    
+                    .price-block {
+                        width: 100%;
+    
+                        &.info {
+                            margin-bottom: 25px;
+                        }
+    
+                        .price-info {
+                            margin-top: 50px;
+    
+                            .price-count {
+                                
+
+                                &:after {
+                                    content: "20000 грн";
+                                    position: absolute;
+                                    top: -30px;
+                                    text-decoration: line-through;
+                                    left: 50%;
+                                    text-align: center;
+                                    width: 100%;
+                                    transform: translateX(-50%);
+                                    @include whiteFont;
+                                    color: #B7B7B7;
+                                }
+    
+                                &::before {
+                                    content: "грн";
+                                    position: absolute;
+                                    right: -30px;
+                                    top: 0;
+                                    @include size18;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+    
+                        .block-btn {
+                            display: inline-flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            align-items: center;
+                            width: 100%;
+                            margin-top: 30px;
+    
+                            .price-btn {
+                                @include bigBtn;
+                                background: var(--green, #E0FF00);
+                                color: $colorDark;
+                                width: 100%;
+                            }
+    
+                            .price-link {
+                                @include size18;
+                                margin-top: 8px;
+                                font-size: 14px;
+                            }
+                        }
+    
+                        .info-list {
+                            display: flex;
+                            justify-content: start;
+                            align-items: center;
+                            flex-wrap: wrap;
+    
+                            .info-item {
+                                position: relative;
+                                margin-left: 10px!important;
+                                list-style-type: none;
+                                margin-top: 15px;
+                                margin-right: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    
+    
+    }
+
+
+    
+
+}
